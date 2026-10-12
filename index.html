@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+  <title>おにぎり屋さんダイス</title>
+  <meta name="description" content="仕入れと開店をまわす、おにぎり屋さんのためのサイコロアプリ。" />
+
+  <meta name="theme-color" content="#f2701f" />
+  <meta name="color-scheme" content="light" />
+
+  <!-- iOS ホーム画面追加用 -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="おにぎりダイス" />
+
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="head">
+      <h1>おにぎり屋さんダイス</h1>
+    </header>
+
+    <main class="stage">
+      <div class="scene" aria-hidden="true">
+        <div class="tilt">
+          <div class="cube" id="cube">
+            <div class="face face--front"  data-kind="stock">
+              <span class="emoji">🍙</span><span class="label">仕入れ</span>
+            </div>
+            <div class="face face--back"   data-kind="stock">
+              <span class="emoji">🍙</span><span class="label">仕入れ</span>
+            </div>
+            <div class="face face--right"  data-kind="plus">
+              <span class="emoji">🍙</span><span class="label">仕入れ<br>(+1枚)</span>
+            </div>
+            <div class="face face--left"   data-kind="minus">
+              <span class="emoji">🍙</span><span class="label">仕入れ<br>(-1枚)</span>
+            </div>
+            <div class="face face--top"    data-kind="open">
+              <span class="emoji">🏪</span><span class="label">開店</span>
+            </div>
+            <div class="face face--bottom" data-kind="open">
+              <span class="emoji">🏪</span><span class="label">開店</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result" id="result" role="status" aria-live="polite">
+        <span class="result-label">サイコロを振ってね</span>
+      </div>
+    </main>
+
+    <button class="roll" id="roll" type="button">サイコロを振る</button>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
