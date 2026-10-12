@@ -37,13 +37,51 @@ body {
     calc(env(safe-area-inset-bottom) + 18px);
 }
 
+.head {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 0;
+}
+
 .head h1 {
-  margin: 6px 0 0;
+  margin: 0;
   font-size: clamp(15px, 4.4vw, 18px);
   font-weight: 800;
   letter-spacing: 0.04em;
   color: #b3622c;
   text-align: center;
+}
+
+.info {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #b3622c;
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 2px 8px rgba(120, 70, 20, 0.14);
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s ease, transform 0.12s ease;
+}
+
+.info:active {
+  transform: translateY(-50%) scale(0.92);
+}
+
+.info svg {
+  display: block;
+  width: 22px;
+  height: 22px;
 }
 
 .stage {
