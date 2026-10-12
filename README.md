@@ -27,6 +27,7 @@
 ├── sw.js                 # Service Worker（オフライン用の最小キャッシュ）
 ├── manifest.webmanifest  # PWA マニフェスト
 ├── icons/                # アプリアイコン（PNG / SVG 原本）
+├── LICENSE               # MIT ライセンス
 └── .nojekyll             # GitHub Pages 用
 ```
 
@@ -63,3 +64,10 @@ python3 -m http.server 8000
 - **Android (Chrome)**: メニュー → 「アプリをインストール」/「ホーム画面に追加」
 
 インストール後は全画面（standalone）で起動します。
+
+## ライセンス
+
+[MIT License](./LICENSE)
+
+同梱しているアイコン等のアセットはすべてこのリポジトリの自作で、サードパーティの OSS は含んでいません（絵文字は端末のフォントで描画、フォントは名前参照のみで非同梱）。
+
