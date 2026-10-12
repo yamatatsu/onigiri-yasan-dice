@@ -2,7 +2,7 @@
  * インストール可能にするための最小限のキャッシュ。
  * アプリ本体はオフラインでも開けるようにしておく。
  */
-const CACHE = "onigiri-dice-v2";
+const CACHE = "onigiri-dice-v3";
 
 const APP_SHELL = [
   "./",
